@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/EWHAMON_GO/Camera.unity
+    guid: d44299e55b1f95849991e8692e1b5dac
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9dcf757b6fc140644b6b3651c8482069, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 66ff166ccdabadd44a876aebb6baafe7, type: 2}
