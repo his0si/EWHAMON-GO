@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 511578230}
   - component: {fileID: 511578229}
   m_Layer: 6
-  m_Name: ECCMon
+  m_Name: mon_pos_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ Transform:
   m_GameObject: {fileID: 511578228}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.29, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 740460834}
   - component: {fileID: 740460833}
   m_Layer: 5
-  m_Name: Text_ECC
+  m_Name: Text_pos_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,10 +509,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ECC
+  m_text: "\uD3EC\uC2A4\uCF54\uAD00"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eeeb4d3b51a303b4eb6cba83af9d0ed8, type: 2}
-  m_sharedMaterial: {fileID: -3813546942009250309, guid: eeeb4d3b51a303b4eb6cba83af9d0ed8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a602c16e319367b4ba57fed4af969828, type: 2}
+  m_sharedMaterial: {fileID: -6266615450174052272, guid: a602c16e319367b4ba57fed4af969828, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -531,13 +531,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 856046442}
   - component: {fileID: 856046441}
   m_Layer: 5
-  m_Name: image_bg_ecc
+  m_Name: image_bg_pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 1145822978}
   - component: {fileID: 1145822977}
   m_Layer: 6
-  m_Name: Ball
+  m_Name: ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -967,7 +967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -310}
+  m_AnchoredPosition: {x: -50, y: -450}
   m_SizeDelta: {x: 1440, y: 2960}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1265207822
