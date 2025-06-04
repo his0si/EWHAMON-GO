@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="eng_3" size="1.000000 1.777778" />
+    <ImageTarget name="eng_2" size="1.000000 1.777778" />
+    <ImageTarget name="eng_1" size="1.000000 1.777778" />
+    <ImageTarget name="pos_3" size="1.000000 1.777778" />
+    <ImageTarget name="pos_2" size="1.000000 1.777778" />
+    <ImageTarget name="pos_1" size="1.000000 1.777778" />
+    <ImageTarget name="ecc_3" size="1.000000 1.777778" />
+    <ImageTarget name="ecc_2" size="1.000000 1.777778" />
+    <ImageTarget name="ecc_1" size="1.000000 1.777778" />
+  </Tracking>
+</QCARConfig>

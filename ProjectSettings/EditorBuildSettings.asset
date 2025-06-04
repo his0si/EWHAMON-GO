@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EWHAMON_GO/4_ECC_Camera.unity
     guid: d44299e55b1f95849991e8692e1b5dac
+  - enabled: 1
+    path: Assets/EWHAMON_GO/2_Map.unity
+    guid: dc521aadd9117c04f81520d7d8a2b9d4
+  - enabled: 1
+    path: Assets/EWHAMON_GO/4_ENG_Camera.unity
+    guid: 7692c7084e60f85468112b32c2d2cc83
+  - enabled: 1
+    path: Assets/EWHAMON_GO/4_POS_Camera.unity
+    guid: 06b23a680df39764294b0111ba8dce94
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9dcf757b6fc140644b6b3651c8482069, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 66ff166ccdabadd44a876aebb6baafe7, type: 2}
