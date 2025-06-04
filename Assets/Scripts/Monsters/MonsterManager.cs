@@ -16,6 +16,20 @@ public class MonsterManager : MonoBehaviour
     public void CatchMonster()
     {
         data.isCaught = true;
+
+        // 장소 상태 갱신
+        string place = PlayerPrefs.GetString("SelectedPlace");
+        int level = PlayerPrefs.GetInt("SelectedLevel");
+
+        GameObject placeObject = GameObject.Find(place);
+        if (placeObject != null)
+        {
+            PlaceManager manager = placeObject.GetComponent<PlaceManager>();
+            if (manager != null)
+            {
+                manager.MarkAsCaught();
+            }
+        }
     }
 
     public void CompleteMission()

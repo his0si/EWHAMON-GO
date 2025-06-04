@@ -6,11 +6,13 @@ using UnityEngine;
 public class GameState
 {
     public List<MonsterData> allMonsters;
+    public List<PlaceData> allPlaces;  // ⬅️ 추가됨
 }
 
 public class GameStateManager : MonoBehaviour
 {
     public List<MonsterManager> monsterManagers;
+    public List<PlaceManager> placeManagers;
 
     private string savePath;
 
@@ -23,10 +25,22 @@ public class GameStateManager : MonoBehaviour
     {
         GameState state = new GameState();
         state.allMonsters = new List<MonsterData>();
+        state.allPlaces = new List<PlaceData>();
 
         foreach (var manager in monsterManagers)
         {
             state.allMonsters.Add(manager.data);
+        }
+
+        foreach (var place in placeManagers)
+        {
+            PlaceData pdata = new PlaceData
+            {
+                placeName = place.placeName,
+                level = place.level,
+                isCaught = place.isCaught
+            };
+            state.allPlaces.Add(pdata);
         }
 
         string json = JsonUtility.ToJson(state, true);
@@ -48,6 +62,14 @@ public class GameStateManager : MonoBehaviour
         for (int i = 0; i < monsterManagers.Count; i++)
         {
             monsterManagers[i].data = state.allMonsters[i];
+        }
+
+        for (int i = 0; i < placeManagers.Count; i++)
+        {
+            var data = state.allPlaces[i];
+            placeManagers[i].placeName = data.placeName;
+            placeManagers[i].level = data.level;
+            placeManagers[i].isCaught = data.isCaught;
         }
 
         Debug.Log("Game Loaded.");
