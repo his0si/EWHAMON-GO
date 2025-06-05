@@ -7,17 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+    guid: dfa58f0a7c531444489f86e482cf29c1
+  - enabled: 0
     path: Assets/EWHAMON_GO/4_ECC_Camera.unity
     guid: d44299e55b1f95849991e8692e1b5dac
   - enabled: 1
     path: Assets/EWHAMON_GO/2_Map.unity
     guid: dc521aadd9117c04f81520d7d8a2b9d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/EWHAMON_GO/4_ENG_Camera.unity
     guid: 7692c7084e60f85468112b32c2d2cc83
-  - enabled: 1
+  - enabled: 0
     path: Assets/EWHAMON_GO/4_POS_Camera.unity
     guid: 06b23a680df39764294b0111ba8dce94
   - enabled: 1
@@ -29,6 +29,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EWHAMON_GO/8_Quiz.unity
     guid: e6ac5208200624f86bdd733ff1a6637e
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_2.unity
+    guid: 1998de0204bed47a59c9bb093cbc09d9
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_1.unity
+    guid: 91c024fbba25845aab67807502d1ea11
+  - enabled: 1
+    path: Assets/EWHAMON_GO/13_MonsterDex.unity
+    guid: d265eb2ce47a246de9d97a8f77dc1c77
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ENG_Camera_1.unity
+    guid: 4d16f96445400497aa2926fc6c41b478
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ENG_Camera_2.unity
+    guid: f3b58b4c16dfb450288a9bc0d045e82c
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ENG_Camera_3.unity
+    guid: db2f850a7dd574b9e80da4fd467beda9
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_POS_Camera_1.unity
+    guid: 963eb876af0f14732a9329ccc9637b53
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_POS_Camera_2.unity
+    guid: 7ff1021605f684869b04b1ce1dd1da20
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_POS_Camera_3.unity
+    guid: cedd957bd7d8947f8ae2190207a13679
+  - enabled: 1
+    path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_3.unity
+    guid: 8af38551d71dd4980882417ec20aed8f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9dcf757b6fc140644b6b3651c8482069, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 66ff166ccdabadd44a876aebb6baafe7, type: 2}
