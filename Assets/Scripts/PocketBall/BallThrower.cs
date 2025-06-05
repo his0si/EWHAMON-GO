@@ -14,7 +14,7 @@ public class BallThrower : MonoBehaviour
     private Vector2 startTouchPos, endTouchPos;
     private bool isDragging = false;
 
-    private GameObject currentBall;
+    public GameObject currentBall;
     private bool isMarkerDetected = false;
 
     void Update()
@@ -73,7 +73,7 @@ public class BallThrower : MonoBehaviour
     {
         if (currentBall != null) Destroy(currentBall);
 
-        Vector3 spawnPos = new Vector3(0f, -0.4f, 1f);
+        Vector3 spawnPos = Camera.main.transform.position + Camera.main.transform.forward * 1.2f + Vector3.down * 0.2f;
         currentBall = Instantiate(pokeballPrefab, spawnPos, Quaternion.identity);
         currentBall.transform.localScale = new Vector3(20f, 20f, 20f);
 
@@ -82,6 +82,7 @@ public class BallThrower : MonoBehaviour
         {
             rb.useGravity = true;
             rb.isKinematic = true;
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         }
 
         Pocketball pb = currentBall.GetComponent<Pocketball>();
@@ -97,10 +98,24 @@ public class BallThrower : MonoBehaviour
 
     void ThrowBall()
     {
-        if (currentBall == null) return;
+        if (currentBall == null)
+        {
+            Debug.LogWarning("⛔ currentBall이 null입니다.");
+            return;
+        }
+
+        if (monster == null)
+        {
+            Debug.LogWarning("❗ monster가 비어 있음");
+            return;
+        }
 
         Rigidbody rb = currentBall.GetComponent<Rigidbody>();
-        if (rb == null) return;
+        if (rb == null)
+        {
+            Debug.LogWarning("⛔ Rigidbody 없음");
+            return;
+        }
 
         Vector2 swipe = endTouchPos - startTouchPos;
         if (swipe.magnitude < 30f)
@@ -118,9 +133,9 @@ public class BallThrower : MonoBehaviour
 
         Vector3 direction = (adjustedTarget - currentBall.transform.position).normalized + Vector3.up * 1.2f;
 
-        rb.isKinematic = false;
+        rb.isKinematic = false;  // ✅ 여기 중요!
         rb.AddForce(direction.normalized * 6f, ForceMode.Impulse);
-        Debug.Log($"🟢 던지는 방향: {direction}");
+        Debug.Log($"🟢 던지는 방향: {direction}, isKinematic 상태: {rb.isKinematic}");
 
         currentBall = null;
         throwCount++;
