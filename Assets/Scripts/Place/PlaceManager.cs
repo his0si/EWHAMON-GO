@@ -3,60 +3,56 @@ using TMPro;
 
 public class PlaceManager : MonoBehaviour
 {
-    public string placeName;
+    public string placeName; // 예: "ECC"
+    public int caughtLevel = 0;
+    public GameObject popupUI;
+    public TextMeshProUGUI popupText;
     public int level = 1;
     public bool isCaught = false;
 
-    public GameObject popupUI;
-    public TextMeshProUGUI popupText;
 
     private void Start()
     {
+        caughtLevel = PlayerPrefs.GetInt($"monster_{placeName}_level", 0);
         if (popupUI != null) popupUI.SetActive(false);
         UpdatePopupText();
     }
 
     public void OnClickPlace()
     {
-        if (isCaught)
-        {
-            level++;
-            isCaught = false;
-        }
-
         UpdatePopupText();
-
-        if (popupUI != null)
-            popupUI.SetActive(true);
+        if (popupUI != null) popupUI.SetActive(true);
     }
 
     public void UpdatePopupText()
-{
-    if (popupText != null)
     {
-        popupText.text = $"Lv.{level}";
+        if (popupText != null)
+        {
+            int nextLevel = caughtLevel + 1;
+            popupText.text = $"Lv.{nextLevel}";
+        }
     }
-}
 
     public void ClosePopup()
     {
-    if (popupUI != null)
-        popupUI.SetActive(false);
-      }
-
+        if (popupUI != null) popupUI.SetActive(false);
+    }
 
     public void MarkAsCaught()
     {
-        isCaught = true;
+        caughtLevel++;
+        PlayerPrefs.SetInt($"monster_{placeName}_level", caughtLevel);
+        Debug.Log($"✅ {placeName}의 몬스터를 Lv.{caughtLevel}로 저장했습니다");
     }
 
-    // 외부에서 씬 이동을 호출할 때 사용
     public void GoToCameraScene()
     {
-        PlayerPrefs.SetString("SelectedPlace", placeName);
-        PlayerPrefs.SetInt("SelectedLevel", level);
+        int nextLevel = caughtLevel + 1;
+        PlayerPrefs.SetString("quiz_place", placeName);
+        PlayerPrefs.SetInt("quiz_level", nextLevel);
+        PlayerPrefs.Save();
 
-        string sceneName = $"4_{placeName}_Camera";
+        string sceneName = $"4_{placeName}_Camera_{nextLevel}";
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }

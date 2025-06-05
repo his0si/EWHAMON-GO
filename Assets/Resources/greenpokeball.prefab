@@ -62,6 +62,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c192fde9a90bd4871935b9c47256b0ee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4233130020866992996}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c192fde9a90bd4871935b9c47256b0ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6463283944721401722}
   m_SourcePrefab: {fileID: 100100000, guid: c192fde9a90bd4871935b9c47256b0ee, type: 3}
 --- !u!1 &819869727712548190 stripped
 GameObject:
@@ -115,4 +118,18 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.014
-  m_Center: {x: -0.0000000027939677, y: -0.0000000013969839, z: -0.00029587}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6463283944721401722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819869727712548190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289614bdfe8fa4dad9dfec6be99e180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 0}
+  thrower: {fileID: 0}
