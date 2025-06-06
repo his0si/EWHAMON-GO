@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC774\uD654\uBAAC\uC744 \uB193\uCCE4\uC5B4\uC694\n"
+  m_text: "\uB2E4\uC2DC \uD55C\uBC88 \uD480\uC5B4\uBCF4\uC138\uC694!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a602c16e319367b4ba57fed4af969828, type: 2}
   m_sharedMaterial: {fileID: -6266615450174052272, guid: a602c16e319367b4ba57fed4af969828, type: 2}
@@ -2637,7 +2637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1822623148
 RectTransform:
   m_ObjectHideFlags: 0
