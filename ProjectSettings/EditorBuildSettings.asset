@@ -59,6 +59,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_3.unity
     guid: 8af38551d71dd4980882417ec20aed8f
+  - enabled: 1
+    path: Assets/EWHAMON_GO/14_ECC_Monster_Detail.unity
+    guid: 13068674a943942afb55086bcdc8a222
+  - enabled: 1
+    path: Assets/EWHAMON_GO/14_ENG_Monster_Detail.unity
+    guid: 8c843c53ed3ac45ebb5fd6d6fb65371c
+  - enabled: 1
+    path: Assets/EWHAMON_GO/14_POS_Monster_Detail.unity
+    guid: d3c70cb0dcd3e4c719f8c9eb93fa65fe
+  - enabled: 1
+    path: Assets/EWHAMON_GO/0_Splash.unity
+    guid: 6c4574fd4ebca9f468c7c363782261d8
+  - enabled: 1
+    path: Assets/EWHAMON_GO/7_Capture_Success.unity
+    guid: 354d19d8b2690c54298d2cb41a751a2f
+  - enabled: 1
+    path: Assets/EWHAMON_GO/15_Camera_Capture.unity
+    guid: d591d010bf58d4886af38b11428fb82c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9dcf757b6fc140644b6b3651c8482069, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 66ff166ccdabadd44a876aebb6baafe7, type: 2}
