@@ -300,7 +300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9bcef758f42164fc8bd07df0c625d55a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 837c8f1a373424c16875c37676d3f2c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1943,13 +1943,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: ecc_3
+  mTrackableName: ecc3
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/EwhaMonGO_DB.xml
-  mAspectRatio: 1.777778
+  mDataSetPath: Vuforia/ewhamonGO_imgtarget.xml
+  mAspectRatio: 0.910305
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.777778
+  mHeight: 0.910305
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -2003,8 +2003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1435226397}
   mHiddenRoot: {fileID: 0}
-  mTargetName: ecc_3
-  mDatasetName: Vuforia/EwhaMonGO_DB.xml
+  mTargetName: ecc3
+  mDatasetName: Vuforia/ewhamonGO_imgtarget.xml
   mCastedBehaviour: {fileID: 1435226397}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
