@@ -23,10 +23,7 @@ public class DexSceneManager : MonoBehaviour
        PlayerPrefs.DeleteKey("caught_ENG_3");
        PlayerPrefs.SetInt("monster_ENG_level", 0);
        PlayerPrefs.Save();
-       Debug.Log("✅ 테스트 상태 설정 완료: ENG만 안 잡힌 상태");
-        UpdateCard("ECC", 0, eccSprites);
-        UpdateCard("POS", 1, posSprites);
-        UpdateCard("ENG", 2, engSprites);
+      
     }
 
     void UpdateCard(string place, int index, Sprite[] sprites)
