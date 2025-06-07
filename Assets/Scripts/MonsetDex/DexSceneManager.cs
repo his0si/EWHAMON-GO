@@ -18,11 +18,6 @@ public class DexSceneManager : MonoBehaviour
 
     void Start()
     {
-      PlayerPrefs.DeleteKey("caught_ENG_1");
-       PlayerPrefs.DeleteKey("caught_ENG_2");
-       PlayerPrefs.DeleteKey("caught_ENG_3");
-       PlayerPrefs.SetInt("monster_ENG_level", 0);
-       PlayerPrefs.Save();
       
     }
 
