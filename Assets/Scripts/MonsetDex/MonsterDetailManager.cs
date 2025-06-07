@@ -17,12 +17,16 @@ public class MonsterDetailManager : MonoBehaviour
     private int level;
 
     void Start()
-    {
+  {
+      place = PlayerPrefs.GetString("dex_place");
+      level = PlayerPrefs.GetInt("dex_level");
 
-        place = PlayerPrefs.GetString("dex_place");
-        level = PlayerPrefs.GetInt("dex_level");
-        UpdateDisplay();
-    }
+      Debug.Log($"🐛 상세화면 시작: place={place}, level={level}");
+      Debug.Log($"🐛 caught 상태: caught_{place}_{level} = {PlayerPrefs.GetInt($"caught_{place}_{level}", 0)}");
+
+      UpdateDisplay();
+  }
+
 
     public void OnClickLeft()
 {
