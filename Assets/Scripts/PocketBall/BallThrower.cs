@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class BallThrower : MonoBehaviour
 {
     public GameObject pokeballPrefab;
@@ -19,6 +20,14 @@ public class BallThrower : MonoBehaviour
 
     public GameObject[] ballImages;  // 오른쪽부터 0, 1, 2
     public GameObject failPanel;     // 실패 시 보여줄 패널
+
+    public AudioClip throwSound; // 🎵 Inspector에서 드래그할 사운드
+    private AudioSource audioSource;
+
+    void Start()
+{
+    audioSource = GetComponent<AudioSource>(); // AudioSource는 BallThrower 오브젝트에 붙어있어야 함
+}
 
     void Update()
     {
@@ -138,6 +147,9 @@ public class BallThrower : MonoBehaviour
         throwCount++;
 
         Invoke(nameof(CheckHitResult), 2f);
+
+        if (PlayerPrefs.GetInt("sfx", 1) == 1 && throwSound != null && audioSource != null)
+    audioSource.PlayOneShot(throwSound);
     }
 
     void CheckHitResult()
