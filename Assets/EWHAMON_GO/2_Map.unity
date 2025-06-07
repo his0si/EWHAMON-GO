@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 445a3881263a2b74da02969813ee2308, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2099f1ba7563a4d4197b3725f37d7ef2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1105,10 +1105,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeName: ECC
-  level: 1
-  isCaught: 0
+  caughtLevel: 0
   popupUI: {fileID: 1788398498}
   popupText: {fileID: 1307878281}
+  level: 1
+  isCaught: 0
 --- !u!114 &1247614690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,7 +1601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 445a3881263a2b74da02969813ee2308, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2099f1ba7563a4d4197b3725f37d7ef2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1631,10 +1632,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeName: ENG
-  level: 1
-  isCaught: 0
+  caughtLevel: 0
   popupUI: {fileID: 458023285}
   popupText: {fileID: 501419135}
+  level: 1
+  isCaught: 0
 --- !u!114 &1416452803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,7 +1828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 445a3881263a2b74da02969813ee2308, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2099f1ba7563a4d4197b3725f37d7ef2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1857,10 +1859,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeName: POS
-  level: 1
-  isCaught: 0
+  caughtLevel: 0
   popupUI: {fileID: 441588025}
   popupText: {fileID: 1904694264}
+  level: 1
+  isCaught: 0
 --- !u!114 &1491485275
 MonoBehaviour:
   m_ObjectHideFlags: 0

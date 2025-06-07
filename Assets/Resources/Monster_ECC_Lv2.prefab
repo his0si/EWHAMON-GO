@@ -53,7 +53,8 @@ PrefabInstance:
       value: Monster_ECC_Lv2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2654713335656134247, guid: d31dbafb2008a405b95a20fa5a909570, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d31dbafb2008a405b95a20fa5a909570, type: 3}

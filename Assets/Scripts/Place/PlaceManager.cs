@@ -11,7 +11,7 @@ public class PlaceManager : MonoBehaviour
     public bool isCaught = false;
 
     private void Start()
-    {
+    {   
         caughtLevel = PlayerPrefs.GetInt($"monster_{placeName}_level", 0);
         if (popupUI != null) popupUI.SetActive(false);
         UpdatePopupText();
