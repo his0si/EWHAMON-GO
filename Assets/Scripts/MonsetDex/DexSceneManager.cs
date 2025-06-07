@@ -18,44 +18,48 @@ public class DexSceneManager : MonoBehaviour
 
     void Start()
     {
-      
+        UpdateCard("ECC", 0, eccSprites);
+        UpdateCard("POS", 1, posSprites);
+        UpdateCard("ENG", 2, engSprites);
     }
 
     void UpdateCard(string place, int index, Sprite[] sprites)
-  {
-      int level = PlayerPrefs.GetInt($"monster_{place}_level", 0);
-      bool isCaught = level >= 1;
+    {
+        int level = PlayerPrefs.GetInt($"monster_{place}_level", 0);
+        int caught = PlayerPrefs.GetInt($"caught_{place}_1", 0); // Lv.1 잡았는지 기준
 
-      // 이미지 설정
-      monsterImages[index].sprite = isCaught ? sprites[level - 1] : pokeballSprite;
+        if (caught == 0 || level == 0)
+        {
+            // 아직 안 잡았을 경우
+            monsterImages[index].sprite = pokeballSprite;
+            monsterNameTexts[index].text = "???";
+            monsterLevelTexts[index].text = "";
+        }
+        else
+        {
+            monsterImages[index].sprite = sprites[level - 1];
+            monsterNameTexts[index].text = GetMonsterName(place, level);
+            monsterLevelTexts[index].text = $"Lv.{level}";
+        }
+    }
 
-      // 이름 설정
-      monsterNameTexts[index].text = isCaught ? GetMonsterName(place, level) : "???";
-
-      // ✅ 레벨 텍스트 설정: 안 잡았으면 표시 X
-      monsterLevelTexts[index].text = isCaught ? $"Lv.{level}" : "";
-  }
-
-
-    // 인스펙터에서 버튼 OnClick에 직접 연결할 함수들
     public void OnClickECC()
-{
-    Debug.Log("🟢 ECC 카드 클릭됨");
-    GoToDetail("ECC");
-}
+    {
+        Debug.Log("🟢 ECC 카드 클릭됨");
+        GoToDetail("ECC");
+    }
 
-public void OnClickPOS()
-{
-    Debug.Log("🟢 POS 카드 클릭됨");
-    GoToDetail("POS");
-}
+    public void OnClickPOS()
+    {
+        Debug.Log("🟢 POS 카드 클릭됨");
+        GoToDetail("POS");
+    }
 
-public void OnClickENG()
-{
-    Debug.Log("🟢 ENG 카드 클릭됨");
-    GoToDetail("ENG");
-}
-
+    public void OnClickENG()
+    {
+        Debug.Log("🟢 ENG 카드 클릭됨");
+        GoToDetail("ENG");
+    }
 
     void GoToDetail(string place)
     {
@@ -67,7 +71,6 @@ public void OnClickENG()
         SceneManager.LoadScene($"14_{place}_Monster_Detail");
     }
 
-    // 몬스터 이름 하드코딩
     string GetMonsterName(string place, int level)
     {
         if (place == "ECC")
