@@ -5,17 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
+    [Header("문제/정답 관련")]
     public TMP_Text questionText;
     public Button[] answerButtons;
 
+    [Header("결과 패널")]
     public GameObject Right_Panel;
     public GameObject Wrong_Panel;
 
+    [Header("정답 텍스트")]
     public TMP_Text rightHeaderMainText;
     public TMP_Text rightHeaderSubText;
     public TMP_Text rightContentText;
 
+    [Header("오답 텍스트")]
     public TMP_Text wrongContentText;
+
+    [Header("장소별 로고 이미지 (퀴즈 상단 UI용)")]
+    public Image placeImage;
+    public Sprite eccSprite;
+    public Sprite posSprite;
+    public Sprite engSprite;
+
+    [Header("몬스터 이미지 (정답/오답 패널용)")]
+    public Image rightMonsterImage;
+    public Image wrongMonsterImage;
+    public Sprite[] monsterSprites; // ECC: 0~2, POS: 3~5, ENG: 6~8
 
     private string place;
     private int level;
@@ -26,14 +41,42 @@ public class QuizManager : MonoBehaviour
         level = PlayerPrefs.GetInt("quiz_level");
 
         Debug.Log($"🧩 퀴즈 로드됨: {place}, Lv.{level}");
+
+        SetPlaceImage(place);
         LoadQuestion(place, level);
     }
 
+    void SetPlaceImage(string place)
+    {
+        if (placeImage == null) return;
+
+        switch (place)
+        {
+            case "ECC": placeImage.sprite = eccSprite; break;
+            case "POS": placeImage.sprite = posSprite; break;
+            case "ENG": placeImage.sprite = engSprite; break;
+            default: placeImage.enabled = false; break;
+        }
+    }
+
+    void SetMonsterImage(Image target)
+    {
+        if (monsterSprites == null || monsterSprites.Length < 9 || target == null) return;
+
+        int offset = place switch {
+            "ECC" => 0,
+            "POS" => 3,
+            "ENG" => 6,
+            _ => 0
+        };
+        int index = offset + Mathf.Clamp(level - 1, 0, 2);
+        target.sprite = monsterSprites[index];
+    }
 
     public void OnClickRetry()
-{
-    Wrong_Panel.SetActive(false);
-}
+    {
+        Wrong_Panel.SetActive(false);
+    }
 
     void LoadQuestion(string place, int level)
     {
@@ -161,18 +204,10 @@ public class QuizManager : MonoBehaviour
     void OnCorrectAnswer(string info)
     {
         Right_Panel.SetActive(true);
+        SetMonsterImage(rightMonsterImage);
 
-        if (level == 1)
-        {
-            rightHeaderMainText.text = "정답이에요!";
-            rightHeaderSubText.text = "이화몬을 포획했어요!";
-        }
-        else
-        {
-            rightHeaderMainText.text = "정답이에요!";
-            rightHeaderSubText.text = $"이화몬이 Lv.{level}로 진화했어요!";
-        }
-
+        rightHeaderMainText.text = "정답이에요!";
+        rightHeaderSubText.text = level == 1 ? "이화몬을 포획했어요!" : $"이화몬이 Lv.{level}로 진화했어요!";
         rightContentText.text = info;
 
         Debug.Log("✅ 정답 패널 표시 완료");
@@ -181,8 +216,9 @@ public class QuizManager : MonoBehaviour
     void OnWrongAnswer(string hint)
     {
         Wrong_Panel.SetActive(true);
-        wrongContentText.text = hint;
+        SetMonsterImage(wrongMonsterImage);
 
+        wrongContentText.text = hint;
         Debug.Log("❌ 오답 패널 표시 완료");
     }
 

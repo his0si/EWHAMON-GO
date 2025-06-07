@@ -438,9 +438,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 607532859}
+      - m_Target: {fileID: 135297470}
         m_TargetAssemblyTypeName: GalleryManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: HidePreview
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

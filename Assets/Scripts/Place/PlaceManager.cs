@@ -7,14 +7,19 @@ public class PlaceManager : MonoBehaviour
     public int caughtLevel = 0;
     public GameObject popupUI;
     public TextMeshProUGUI popupText;
+    public TextMeshProUGUI collectionRateText; // ← ✅ 추가: 수집률 텍스트
     public int level = 1;
     public bool isCaught = false;
 
+    private string[] placeNames = { "ECC", "ENG", "POS" }; // ← ✅ 3종류의 장소명
+    private int totalMonsters = 9;
+
     private void Start()
-    {   
+    {
         caughtLevel = PlayerPrefs.GetInt($"monster_{placeName}_level", 0);
         if (popupUI != null) popupUI.SetActive(false);
         UpdatePopupText();
+        UpdateCollectionRate(); // ← ✅ 수집률 표시
     }
 
     public void OnClickPlace()
@@ -39,6 +44,21 @@ public class PlaceManager : MonoBehaviour
         }
     }
 
+    public void UpdateCollectionRate()
+    {
+        if (collectionRateText == null) return;
+
+        int totalCaught = 0;
+
+        foreach (string name in placeNames)
+        {
+            int level = PlayerPrefs.GetInt($"monster_{name}_level", 0);
+            totalCaught += Mathf.Clamp(level, 0, 3); // 최대 3마리로 제한
+        }
+
+        collectionRateText.text = $"도감 수집률: {totalCaught}/{totalMonsters}";
+    }
+
     public void ClosePopup()
     {
         if (popupUI != null) popupUI.SetActive(false);
@@ -49,6 +69,9 @@ public class PlaceManager : MonoBehaviour
         caughtLevel++;
         PlayerPrefs.SetInt($"monster_{placeName}_level", caughtLevel);
         Debug.Log($"✅ {placeName}의 몬스터를 Lv.{caughtLevel}로 저장했습니다");
+
+        UpdatePopupText();       // 텍스트 갱신
+        UpdateCollectionRate();  // 수집률 갱신
     }
 
     public void GoToCameraScene()
