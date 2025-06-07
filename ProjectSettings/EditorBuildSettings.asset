@@ -77,6 +77,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EWHAMON_GO/15_Camera_Capture.unity
     guid: d591d010bf58d4886af38b11428fb82c
+  - enabled: 1
+    path: Assets/EWHAMON_GO/OnBoarding/18_0_OnBoarding.unity
+    guid: eaa7f097db085491997b0deddf6d4f52
+  - enabled: 1
+    path: Assets/EWHAMON_GO/OnBoarding/18_1_tutorial1.unity
+    guid: b0d400405c5c03442a52756c4a3c06c5
+  - enabled: 1
+    path: Assets/EWHAMON_GO/OnBoarding/18_1_tutorial2.unity
+    guid: b86733f9dcc8c0340ba1024c485de424
+  - enabled: 1
+    path: Assets/EWHAMON_GO/OnBoarding/18_1_tutorial3.unity
+    guid: ab047f1608eff074e906819765cadabc
+  - enabled: 1
+    path: Assets/EWHAMON_GO/Setting/19_Setting_Version.unity
+    guid: 8c0947534bf1c46f288fa22ba3a83eea
+  - enabled: 1
+    path: Assets/EWHAMON_GO/Setting/19_Setting.unity
+    guid: 74c4b98d4001ff440941c03a8ce91e3f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9dcf757b6fc140644b6b3651c8482069, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 66ff166ccdabadd44a876aebb6baafe7, type: 2}

@@ -1,25 +1,26 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlaceManager : MonoBehaviour
 {
-    public string placeName; // 예: "ECC"
+    public string placeName; // 예: "ECC", "POS", "ENG"
     public int caughtLevel = 0;
     public GameObject popupUI;
     public TextMeshProUGUI popupText;
-    public TextMeshProUGUI collectionRateText; // ← ✅ 추가: 수집률 텍스트
+    public TextMeshProUGUI collectionRateText;
     public int level = 1;
     public bool isCaught = false;
 
-    private string[] placeNames = { "ECC", "ENG", "POS" }; // ← ✅ 3종류의 장소명
+    private string[] placeNames = { "ECC", "POS", "ENG" };
     private int totalMonsters = 9;
 
-    private void Start()
+    void Start()
     {
         caughtLevel = PlayerPrefs.GetInt($"monster_{placeName}_level", 0);
         if (popupUI != null) popupUI.SetActive(false);
         UpdatePopupText();
-        UpdateCollectionRate(); // ← ✅ 수집률 표시
+        UpdateCollectionRate();
     }
 
     public void OnClickPlace()
@@ -52,8 +53,13 @@ public class PlaceManager : MonoBehaviour
 
         foreach (string name in placeNames)
         {
-            int level = PlayerPrefs.GetInt($"monster_{name}_level", 0);
-            totalCaught += Mathf.Clamp(level, 0, 3); // 최대 3마리로 제한
+            for (int lvl = 1; lvl <= 3; lvl++)
+            {
+                if (PlayerPrefs.GetInt($"caught_{name}_{lvl}", 0) == 1)
+                {
+                    totalCaught++;
+                }
+            }
         }
 
         collectionRateText.text = $"도감 수집률: {totalCaught}/{totalMonsters}";
@@ -68,10 +74,16 @@ public class PlaceManager : MonoBehaviour
     {
         caughtLevel++;
         PlayerPrefs.SetInt($"monster_{placeName}_level", caughtLevel);
+
+        // ✅ caught_{place}_{level} 저장
+        PlayerPrefs.SetInt($"caught_{placeName}_{caughtLevel}", 1);
+
+        PlayerPrefs.Save();
+
         Debug.Log($"✅ {placeName}의 몬스터를 Lv.{caughtLevel}로 저장했습니다");
 
-        UpdatePopupText();       // 텍스트 갱신
-        UpdateCollectionRate();  // 수집률 갱신
+        UpdatePopupText();
+        UpdateCollectionRate();
     }
 
     public void GoToCameraScene()
@@ -88,6 +100,6 @@ public class PlaceManager : MonoBehaviour
         PlayerPrefs.Save();
 
         string sceneName = $"4_{placeName}_Camera_{nextLevel}";
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }
