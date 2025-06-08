@@ -492,12 +492,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1440, y: 2960}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2176,14 +2176,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: ecc3
+  mTrackableName: ecc3_ImageTarget
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/ewhamonGO_imgtarget.xml
-  mAspectRatio: 0.910305
-  mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.910305
-  mRuntimeTexture: {fileID: 0}
+  mAspectRatio: 1.5003663
+  mImageTargetType: 3
+  mWidth: 0.13330078
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 2800000, guid: 2b8c41757b8232e42a3e423f25b63a68, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1435226397}
   mHiddenRoot: {fileID: 0}
-  mTargetName: ecc3
+  mTargetName: ecc3_ImageTarget
   mDatasetName: Vuforia/ewhamonGO_imgtarget.xml
   mCastedBehaviour: {fileID: 1435226397}
   mMeshFilter: {fileID: 0}

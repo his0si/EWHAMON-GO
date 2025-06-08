@@ -76,20 +76,20 @@ public class DexSceneManager : MonoBehaviour
         if (place == "ECC")
         {
             if (level == 1) return "이큐다";
-            if (level == 2) return "플로라";
-            if (level == 3) return "블루밍";
+            if (level == 2) return "베플리아";
+            if (level == 3) return "엑시클레버";
         }
         else if (place == "POS")
         {
-            if (level == 1) return "포스코몬";
-            if (level == 2) return "캣츠포";
-            if (level == 3) return "티탄포";
+            if (level == 1) return "포냥코";
+            if (level == 2) return "포스캣";
+            if (level == 3) return "포닉스";
         }
         else if (place == "ENG")
         {
-            if (level == 1) return "공대몬";
-            if (level == 2) return "렌치부엉";
-            if (level == 3) return "엔지빔";
+            if (level == 1) return "코딩어려엉";
+            if (level == 2) return "버그시러엉";
+            if (level == 3) return "코딩마스터엉";
         }
         return "???";
     }

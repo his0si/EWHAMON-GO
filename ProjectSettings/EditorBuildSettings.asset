@@ -8,36 +8,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: dfa58f0a7c531444489f86e482cf29c1
-  - enabled: 0
-    path: Assets/EWHAMON_GO/4_ECC_Camera.unity
-    guid: d44299e55b1f95849991e8692e1b5dac
   - enabled: 1
-    path: Assets/EWHAMON_GO/2_Map.unity
-    guid: dc521aadd9117c04f81520d7d8a2b9d4
-  - enabled: 0
-    path: Assets/EWHAMON_GO/4_ENG_Camera.unity
-    guid: 7692c7084e60f85468112b32c2d2cc83
-  - enabled: 0
-    path: Assets/EWHAMON_GO/4_POS_Camera.unity
-    guid: 06b23a680df39764294b0111ba8dce94
-  - enabled: 1
-    path: Assets/EWHAMON_GO/16_Gallery.unity
-    guid: d4a9cc097a6854bb3965d4f5dc87294c
+    path: Assets/EWHAMON_GO/0_Splash.unity
+    guid: 6c4574fd4ebca9f468c7c363782261d8
   - enabled: 1
     path: Assets/EWHAMON_GO/1_Main.unity
     guid: e24626fcecce710468fc8021954fe1e8
   - enabled: 1
-    path: Assets/EWHAMON_GO/8_Quiz.unity
-    guid: e6ac5208200624f86bdd733ff1a6637e
-  - enabled: 1
-    path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_2.unity
-    guid: 1998de0204bed47a59c9bb093cbc09d9
+    path: Assets/EWHAMON_GO/2_Map.unity
+    guid: dc521aadd9117c04f81520d7d8a2b9d4
   - enabled: 1
     path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_1.unity
     guid: 91c024fbba25845aab67807502d1ea11
   - enabled: 1
-    path: Assets/EWHAMON_GO/13_MonsterDex.unity
-    guid: d265eb2ce47a246de9d97a8f77dc1c77
+    path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_2.unity
+    guid: 1998de0204bed47a59c9bb093cbc09d9
   - enabled: 1
     path: Assets/EWHAMON_GO/PocketBall/4_ENG_Camera_1.unity
     guid: 4d16f96445400497aa2926fc6c41b478
@@ -59,24 +44,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EWHAMON_GO/PocketBall/4_ECC_Camera_3.unity
     guid: 8af38551d71dd4980882417ec20aed8f
+  - enabled: 0
+    path: Assets/EWHAMON_GO/7_Capture_Success.unity
+    guid: 354d19d8b2690c54298d2cb41a751a2f
+  - enabled: 1
+    path: Assets/EWHAMON_GO/8_Quiz.unity
+    guid: e6ac5208200624f86bdd733ff1a6637e
+  - enabled: 1
+    path: Assets/EWHAMON_GO/13_MonsterDex.unity
+    guid: d265eb2ce47a246de9d97a8f77dc1c77
   - enabled: 1
     path: Assets/EWHAMON_GO/14_ECC_Monster_Detail.unity
     guid: 13068674a943942afb55086bcdc8a222
   - enabled: 1
     path: Assets/EWHAMON_GO/14_ENG_Monster_Detail.unity
-    guid: 8c843c53ed3ac45ebb5fd6d6fb65371c
+    guid: a392b0c349e50499baed91a9cdc1ba98
   - enabled: 1
     path: Assets/EWHAMON_GO/14_POS_Monster_Detail.unity
-    guid: d3c70cb0dcd3e4c719f8c9eb93fa65fe
-  - enabled: 1
-    path: Assets/EWHAMON_GO/0_Splash.unity
-    guid: 6c4574fd4ebca9f468c7c363782261d8
-  - enabled: 1
-    path: Assets/EWHAMON_GO/7_Capture_Success.unity
-    guid: 354d19d8b2690c54298d2cb41a751a2f
+    guid: 401ad564d91dd4b20929df48168b5f93
   - enabled: 1
     path: Assets/EWHAMON_GO/15_Camera_Capture.unity
     guid: d591d010bf58d4886af38b11428fb82c
+  - enabled: 1
+    path: Assets/EWHAMON_GO/16_Gallery.unity
+    guid: d4a9cc097a6854bb3965d4f5dc87294c
   - enabled: 1
     path: Assets/EWHAMON_GO/OnBoarding/18_0_OnBoarding.unity
     guid: eaa7f097db085491997b0deddf6d4f52

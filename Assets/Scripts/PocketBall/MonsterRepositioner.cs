@@ -20,6 +20,7 @@ public class MonsterRepositioner : MonoBehaviour
         {
             observer.OnTargetStatusChanged += OnStatusChanged;
             Debug.Log("📡 마커 감지 리스너 등록됨");
+            
         }
         else
         {
@@ -57,5 +58,6 @@ public class MonsterRepositioner : MonoBehaviour
                 Debug.Log("✅ 패널 표시 완료");
             }
         }
+
     }
 }
